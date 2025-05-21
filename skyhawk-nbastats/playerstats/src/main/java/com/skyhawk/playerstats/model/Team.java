@@ -3,17 +3,13 @@ package com.skyhawk.playerstats.model;
 public class Team {
     private Long id;
     private String name;
-    private String city;
-    private String abbreviation;
 
     public Team() {
     }
 
-    public Team(Long id, String name, String city, String abbreviation) {
+    public Team(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.city = city;
-        this.abbreviation = abbreviation;
     }
 
     // Getters and Setters
@@ -33,19 +29,4 @@ public class Team {
         this.name = name;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getAbbreviation() {
-        return abbreviation;
-    }
-
-    public void setAbbreviation(String abbreviation) {
-        this.abbreviation = abbreviation;
-    }
 }
