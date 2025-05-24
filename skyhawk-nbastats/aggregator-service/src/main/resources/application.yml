@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: aggregator-service
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: aggregator-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  redis:
+    host: redis
+    port: 6379
+
+logging:
+  level:
+    root: INFO
+    com.yourcompany.aggregator: DEBUG

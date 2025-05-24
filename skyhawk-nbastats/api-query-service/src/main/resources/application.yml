@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nbastats
+    username: your_postgres_user
+    password: your_postgres_password
+    driver-class-name: org.postgresql.Driver
+
+  redis:
+    host: localhost
+    port: 6379
+    # password: your_redis_password (uncomment if needed)
+
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+    org.springframework.data.redis.core.RedisTemplate: DEBUG
