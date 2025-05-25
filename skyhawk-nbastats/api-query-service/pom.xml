@@ -55,6 +55,19 @@
             <scope>runtime</scope>
         </dependency>
 
+<!-- Spring Boot Test (includes JUnit 5, Mockito, MockMvc, etc.) -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+
+<!-- Jackson support for JSONPath in MockMvc test -->
+<dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <scope>test</scope>
+</dependency>
 	</dependencies>
 
 	<build>

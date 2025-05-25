@@ -48,7 +48,7 @@ public class FlusherService {
         }
     }
 
-    private void removeGameKeys(Long gameId) {
+    public void removeGameKeys(String gameId) {
         Set<String> keys = redisClient.getAllKeys();
         for (String key : keys) {
             if (key.endsWith(":" + gameId)) {

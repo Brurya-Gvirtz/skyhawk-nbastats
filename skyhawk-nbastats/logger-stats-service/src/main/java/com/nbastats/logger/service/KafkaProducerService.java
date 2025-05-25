@@ -24,6 +24,11 @@ public class KafkaProducerService {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         this.producer = new KafkaProducer<>(props);
     }
+    
+ // For testing
+    public KafkaProducerService(Producer<String, String> producer) {
+        this.producer = producer;
+    }
 
     public void send(PlayerStats stat) throws Exception {
         String value = objectMapper.writeValueAsString(stat);

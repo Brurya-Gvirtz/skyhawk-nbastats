@@ -4,10 +4,10 @@ package com.nbastats.aggregator.model;
 import java.time.LocalDateTime;
 
 public class PlayerStats {
-    private Long id;
-    private Long playerId;
-    private Long gameId;
-    private Long teamId;
+    private String id;
+    private String playerId;
+    private String gameId;
+    private String teamId;
     private int points;
     private int rebounds;
     private int assists;
@@ -21,7 +21,7 @@ public class PlayerStats {
     public PlayerStats() {
     }
 
-    public PlayerStats(Long id, Long playerId, Long gameId, Long teamId, int points, int rebounds, int assists, 
+    public PlayerStats(String id, String playerId, String gameId, String teamId, int points, int rebounds, int assists, 
                           int steals, int blocks, int fouls, int turnovers, 
                           double minutesPlayed, LocalDateTime lastUpdated) {
         this.id = id;
@@ -40,35 +40,35 @@ public class PlayerStats {
     }
 
     // Getters and Setters
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Long getPlayerId() {
+    public String getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(Long playerId) {
+    public void setPlayerId(String playerId) {
         this.playerId = playerId;
     }
 
-    public Long getGameId() {
+    public String getGameId() {
         return gameId;
     }
 
-    public void setGameId(Long gameId) {
+    public void setGameId(String gameId) {
         this.gameId = gameId;
     }
     
-    public Long getTeamId() {
+    public String getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(Long teamId) {
+    public void setTeamId(String teamId) {
         this.teamId = teamId;
     }
 

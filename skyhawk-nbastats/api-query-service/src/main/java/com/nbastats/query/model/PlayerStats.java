@@ -2,11 +2,11 @@ package com.nbastats.query.model;
 
 public class PlayerStats {
 	private String id;
-    private Long playerid;
+    private String playerId;
     private String playerName;
-	private Long teamid;
+	private String teamId;
 	private String teamName;
-    private Long gameid;
+    private String gameId;
     private int points;
     private int rebound;
     private int assist;
@@ -22,11 +22,11 @@ public class PlayerStats {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public Long getPlayerid() {
-		return playerid;
+	public String getPlayerId() {
+		return playerId;
 	}
-	public void setPlayerid(Long playerid) {
-		this.playerid = playerid;
+	public void setPlayerId(String playerid) {
+		this.playerId = playerid;
 	}
 	public String getPlayerName() {
 		return playerName;
@@ -34,17 +34,17 @@ public class PlayerStats {
 	public void setPlayerName(String playerName) {
 		this.playerName = playerName;
 	}
-	public Long getTeamid() {
-		return teamid;
+	public String getTeamId() {
+		return teamId;
 	}
-	public void setTeamid(Long teamid) {
-		this.teamid = teamid;
+	public void setTeamId(String teamid) {
+		this.teamId = teamid;
 	}
-	public Long getGameid() {
-		return gameid;
+	public String getGameId() {
+		return gameId;
 	}
-	public void setGameid(Long gameid) {
-		this.gameid = gameid;
+	public void setGameId(String gameid) {
+		this.gameId = gameid;
 	}
 	public int getPoints() {
 		return points;

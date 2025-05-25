@@ -33,10 +33,10 @@ public class PostgresWriter {
             conn.setAutoCommit(false);
 
             try (PreparedStatement stmt = conn.prepareStatement(insertSQL)) {
-                stmt.setLong(1, stats.getId());
-                stmt.setLong(2, stats.getPlayerId());
-                stmt.setLong(3, stats.getGameId());
-                stmt.setLong(4, stats.getTeamId());
+                stmt.setString(1, stats.getId());
+                stmt.setString(2, stats.getPlayerId());
+                stmt.setString(3, stats.getGameId());
+                stmt.setString(4, stats.getTeamId());
                 stmt.setInt(5, stats.getPoints());
                 stmt.setInt(6, stats.getRebounds());
                 stmt.setInt(7, stats.getAssists());

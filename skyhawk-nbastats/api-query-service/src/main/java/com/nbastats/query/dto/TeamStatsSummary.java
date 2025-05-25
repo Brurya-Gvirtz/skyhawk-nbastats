@@ -11,6 +11,20 @@ public class TeamStatsSummary {
     private double avgFouls;
     private double avgTurnovers;
     
+	public TeamStatsSummary(String teamName, int games, double avgPoints, double avgRebounds, double avgAssists,
+			double avgSteals, double avgBlocks, double avgFouls, double avgTurnovers) {
+		super();
+		this.teamName = teamName;
+		this.games = games;
+		this.avgPoints = avgPoints;
+		this.avgRebounds = avgRebounds;
+		this.avgAssists = avgAssists;
+		this.avgSteals = avgSteals;
+		this.avgBlocks = avgBlocks;
+		this.avgFouls = avgFouls;
+		this.avgTurnovers = avgTurnovers;
+	}
+	public TeamStatsSummary() {}
 	public String getTeamName() {
 		return teamName;
 	}

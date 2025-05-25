@@ -1,25 +1,25 @@
 package com.nbastats.logger.model;
 
 public class Player {
-    private Long id;
+    private String id;
     private String name;
     private String position;
 
     public Player() {
     }
 
-    public Player(Long id, String name, String position) {
+    public Player(String id, String name, String position) {
         this.id = id;
         this.name = name;
         this.position = position;
     }
 
     // Getters and Setters
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

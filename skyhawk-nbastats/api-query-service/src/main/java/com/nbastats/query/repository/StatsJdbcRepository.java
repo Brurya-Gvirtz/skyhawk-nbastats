@@ -27,7 +27,7 @@ public class StatsJdbcRepository {
         return jdbc.query(sql, (rs, rowNum) -> {
             PlayerStats s = new PlayerStats();
             s.setPlayerName(rs.getString("playerName"));
-            s.setGameid(rs.getLong("gameId"));
+            s.setGameId(rs.getString("gameId"));
             s.setPoints(rs.getInt("points"));
             s.setRebound(rs.getInt("rebound"));
             s.setAssist(rs.getInt("assist"));
@@ -51,7 +51,7 @@ public class StatsJdbcRepository {
         return jdbc.query(sql, (rs, rowNum) -> {
             PlayerStats s = new PlayerStats();
             s.setTeamName(rs.getString("teamName"));
-            s.setGameid(rs.getLong("gameId"));
+            s.setGameId(rs.getString("gameId"));
             s.setPoints(rs.getInt("points"));
             s.setRebound(rs.getInt("rebound"));
             s.setAssist(rs.getInt("assist"));

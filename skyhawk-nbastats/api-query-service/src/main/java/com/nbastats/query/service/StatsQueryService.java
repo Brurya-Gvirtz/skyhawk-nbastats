@@ -54,17 +54,17 @@ public class StatsQueryService {
         List<PlayerStats> liveStats = redisService.getLiveStatsForPlayer(playerId);
 
         List<PlayerStats> filteredLiveStats = new ArrayList<>();
-        Set<Long> historyGameIds;
+        Set<String> historyGameIds;
         if (historySummary != null) {
             historyGameIds = Collections.emptySet(); // placeholder, not used
             filteredLiveStats = liveStats;
         } else {
             historyGameIds = dbStats.stream()
-                    .map(PlayerStats::getGameid)
+                    .map(PlayerStats::getGameId)
                     .collect(Collectors.toSet());
 
             filteredLiveStats = liveStats.stream()
-                    .filter(stat -> !historyGameIds.contains(stat.getGameid()))
+                    .filter(stat -> !historyGameIds.contains(stat.getGameId()))
                     .collect(Collectors.toList());
         }
 
@@ -181,18 +181,18 @@ public class StatsQueryService {
         List<PlayerStats> liveStats = redisService.getLiveStatsForTeam(teamId);
 
         List<PlayerStats> filteredLiveStats;
-        Set<Long> historyGameIds;
+        Set<String> historyGameIds;
 
         if (teamSummary != null) {
             filteredLiveStats = liveStats; // no filtering needed
             historyGameIds = Collections.emptySet(); // unused
         } else {
             historyGameIds = dbStats.stream()
-                    .map(PlayerStats::getGameid)
+                    .map(PlayerStats::getGameId)
                     .collect(Collectors.toSet());
 
             filteredLiveStats = liveStats.stream()
-                    .filter(stat -> !historyGameIds.contains(stat.getGameid()))
+                    .filter(stat -> !historyGameIds.contains(stat.getGameId()))
                     .collect(Collectors.toList());
         }
 

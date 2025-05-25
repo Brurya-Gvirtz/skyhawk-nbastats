@@ -2,7 +2,7 @@ package com.nbastats.logger.model;
 import java.time.LocalDateTime;
 
 public class Game {
-    private Long id;
+    private String id;
     private LocalDateTime gameDate;
     private String season;
     private String gameStatus; // "SCHEDULED", "IN_PROGRESS", "COMPLETED"
@@ -10,7 +10,7 @@ public class Game {
     public Game() {
     }
 
-    public Game(Long id, Long homeTeamId, Long awayTeamId, LocalDateTime gameDate, String season, String gameStatus) {
+    public Game(String id, Long homeTeamId, Long awayTeamId, LocalDateTime gameDate, String season, String gameStatus) {
         this.id = id;
         this.gameDate = gameDate;
         this.season = season;
@@ -18,11 +18,11 @@ public class Game {
     }
 
     // Getters and Setters
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -13,6 +13,20 @@ public class PlayerStatsSummary {
     
     public PlayerStatsSummary() {}
     
+	public PlayerStatsSummary(String playerName, int games, double avgPoints, double avgRebounds, double avgAssists,
+			double avgSteals, double avgBlocks, double avgFouls, double avgTurnovers) {
+		super();
+		this.playerName = playerName;
+		this.games = games;
+		this.avgPoints = avgPoints;
+		this.avgRebounds = avgRebounds;
+		this.avgAssists = avgAssists;
+		this.avgSteals = avgSteals;
+		this.avgBlocks = avgBlocks;
+		this.avgFouls = avgFouls;
+		this.avgTurnovers = avgTurnovers;
+	}
+
 	public String getPlayerName() {
 		return playerName;
 	}

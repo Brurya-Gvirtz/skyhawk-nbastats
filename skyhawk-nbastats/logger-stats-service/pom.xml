@@ -34,8 +34,27 @@
     		<groupId>org.apache.kafka</groupId>
     		<artifactId>kafka-clients</artifactId>
 	</dependency>
-        
-    </dependencies>
+
+         <!-- Testing (JUnit 5, MockMvc, etc.) -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.junit.vintage</groupId>
+          <artifactId>junit-vintage-engine</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- Kafka test (mock Kafka producers) -->
+    <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
     <build>
         <plugins>
