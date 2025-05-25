@@ -85,16 +85,14 @@ Content-Type: application/json
   "gameId": "game_123",
   "playerId": "lebron_james",
   "teamId": "lakers",
-  "timestamp": "2024-01-15T20:30:00Z",
-  "stats": {
-    "points": 28,
-    "rebounds": 8,
-    "assists": 12,
-    "steals": 2,
-    "blocks": 1,
-    "fouls": 3,
-    "turnovers": 4,
-    "minutesPlayed": 38.5
+  "points": 28,
+  "rebounds": 8,
+  "assists": 12,
+  "steals": 2,
+  "blocks": 1,
+  "fouls": 3,
+  "turnovers": 4,
+  "minutesPlayed": 38.5
   }
 }
 ```
