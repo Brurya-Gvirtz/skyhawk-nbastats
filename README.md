@@ -13,9 +13,9 @@ A high-performance, real-time NBA player statistics logging and aggregation syst
 - **Real-time Updates**: Statistics available immediately after ingestion
 
 ## 🏗️ Architecture
-<a href="./docs/system-design.drawio.png" target="_blank"/>
+<a href="./docs/system-design.drawio.png" target="_blank"> System Design (by draw.io) </a>
 <br/>
-<a href="./docs/aws-design.drawio.png" target="_blank"/>
+<a href="./docs/aws-design.drawio.png" target="_blank"/> AWS Architacture Design (by draw.io)</a>
 
 
 ### Data Flow
