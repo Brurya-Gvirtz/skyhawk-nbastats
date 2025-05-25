@@ -13,6 +13,10 @@ A high-performance, real-time NBA player statistics logging and aggregation syst
 - **Real-time Updates**: Statistics available immediately after ingestion
 
 ## 🏗️ Architecture
+<a href="./skyhawk-nbastats/docs/system-design.drawio.png" target="_blank"> System Design (by draw.io) </a>
+<br/>
+<a href="./skyhawk-nbastats/docs/aws-design.drawio.png" target="_blank"/> AWS Architacture Design (by draw.io)</a>
+
 
 ### Data Flow
 
@@ -99,12 +103,12 @@ Content-Type: application/json
 
 #### Get Player Stats (Live + Historical)
 ```http
-GET /api/v1/stats/player/{playerId}/season/{season}
+GET /api/v1/stats/player/{playerId}
 ```
 
 #### Get Team Season Average
 ```http
-GET /api/v1/stats/team/{teamId}/season/{season}
+GET /api/v1/stats/team/{teamId
 ```
 
 ### Response Format
@@ -113,7 +117,6 @@ GET /api/v1/stats/team/{teamId}/season/{season}
   "playerId": "lebron_james",
   "playerName": "LeBron James",
   "teamId": "lakers",
-  "season": "2024",
   "averages": {
     "points": 25.4,
     "rebounds": 7.8,
