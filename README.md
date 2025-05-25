@@ -103,12 +103,12 @@ Content-Type: application/json
 
 #### Get Player Stats (Live + Historical)
 ```http
-GET /api/v1/stats/player/{playerId}/season/{season}
+GET /api/v1/stats/player/{playerId}
 ```
 
 #### Get Team Season Average
 ```http
-GET /api/v1/stats/team/{teamId}/season/{season}
+GET /api/v1/stats/team/{teamId
 ```
 
 ### Response Format
@@ -117,7 +117,6 @@ GET /api/v1/stats/team/{teamId}/season/{season}
   "playerId": "lebron_james",
   "playerName": "LeBron James",
   "teamId": "lakers",
-  "season": "2024",
   "averages": {
     "points": 25.4,
     "rebounds": 7.8,
