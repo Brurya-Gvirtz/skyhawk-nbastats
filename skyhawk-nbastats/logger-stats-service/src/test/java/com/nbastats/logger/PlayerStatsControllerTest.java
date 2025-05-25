@@ -33,7 +33,9 @@ class PlayerStatsControllerTest {
     @Test
     void testLogStatsSuccess() throws Exception {
         PlayerStats stat = new PlayerStats();
-        stat.setPlayerId("23");
+        stat.setPlayerId("p1");
+        stat.setTeamId("t1");
+        stat.setGameId("g1");
         stat.setPoints(30);
         stat.setRebounds(10);
         stat.setAssists(5);
@@ -52,7 +54,9 @@ class PlayerStatsControllerTest {
     @Test
     void testLogStatsKafkaError() throws Exception {
         PlayerStats stat = new PlayerStats();
-        stat.setPlayerId("23");
+        stat.setPlayerId("p1");
+        stat.setTeamId("t1");
+        stat.setGameId("g1");
         stat.setPoints(30);
         stat.setRebounds(10);
         stat.setAssists(5);

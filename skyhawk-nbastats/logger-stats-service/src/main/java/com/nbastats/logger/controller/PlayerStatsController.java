@@ -19,7 +19,7 @@ public class PlayerStatsController {
     private KafkaProducerService producer;
 
     @PostMapping
-    public ResponseEntity<?> logStats(@Valid @RequestBody PlayerStats stat) {
+    public ResponseEntity<?> logStats(@Valid @RequestBody PlayerStats stat)  throws Exception {
         try {
             producer.send(stat);
             return ResponseEntity.ok().build();

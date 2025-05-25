@@ -3,18 +3,33 @@ package com.nbastats.logger.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+
 public class PlayerStats {
     private String id;
+    @NotNull(message = "Player ID is required")
     private String playerId;
+    @NotNull(message = "Game ID is required")
     private String gameId;
+    @NotNull(message = "Team ID is required")
     private String teamId;
+    @Min(0)
     private int points;
+    @Min(0)
     private int rebounds;
+    @Min(0)
     private int assists;
+    @Min(0)
     private int steals;
+    @Min(0)
     private int blocks;
+    @Min(0) @Max(value = 6, message = "Fouls cannot exceed 6")
     private int fouls;
+    @Min(0)
     private int turnovers;
+    @Min(0) @Max(48)
     private double minutesPlayed;
     private LocalDateTime lastUpdated;
 

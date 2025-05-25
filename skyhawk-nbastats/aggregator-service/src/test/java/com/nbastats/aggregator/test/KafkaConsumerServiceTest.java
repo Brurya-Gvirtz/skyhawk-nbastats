@@ -20,7 +20,7 @@ class KafkaConsumerServiceTest {
 
     @Test
     void testConsume_validMessage_callsRedisService() throws Exception {
-        PlayerStats stats = new PlayerStats("111","playerId", "gameId", "teamId", 10, 20,  10, 20,  10, 20,  10, 20, null);
+        PlayerStats stats = new PlayerStats("111","p1", "g1", "t1", 10, 20,  10, 20,  10, 20,  10, 20, null);
         String json = objectMapper.writeValueAsString(stats);
 
         ConsumerRecord<String, String> record = new ConsumerRecord<>("game-stats", 0, 0L, null, json);

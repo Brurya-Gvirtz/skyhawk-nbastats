@@ -31,7 +31,7 @@ class RedisAggregatorServiceTest {
 
     @Test
     void testUpdateStats_setsPlayerAndTeamKeysInRedis() throws Exception {
-        PlayerStats stat = new PlayerStats("111","playerId", "gameId", "teamId", 10, 20,  10, 20,  10, 20,  10, 20, null);
+        PlayerStats stat = new PlayerStats("111","p1", "g1", "t1", 10, 20,  10, 20,  10, 20,  10, 20, null);
 
         redisService.updateStats(stat);
 
