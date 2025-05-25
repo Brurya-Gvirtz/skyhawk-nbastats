@@ -13,10 +13,13 @@ A high-performance, real-time NBA player statistics logging and aggregation syst
 - **Real-time Updates**: Statistics available immediately after ingestion
 
 ## 🏗️ Architecture
+![System Architecture](./docs/NBAStats-system design.drawio.png)
+![AWS Architecture Diagram](./docs/NBA Stats- AWS Services.drawio.png)
+
+*Figure 1: High-level system architecture showing the main components and their interactions*
+
 
 ### Data Flow
-![Architecture Diagram](docs/NBAStats-system design.drawio.png)
-![AWS Architecture Diagram](docs/NBA Stats- AWS Services.drawio.png)
 
 #### Write Path (Updating Player Statistics)
 1. **External System** → API Gateway (rate limiting, auth)
