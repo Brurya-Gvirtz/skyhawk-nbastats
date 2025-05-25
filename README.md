@@ -133,19 +133,16 @@ GET /api/v1/stats/team/{teamId
 
 
 ### Testing
+Unit tests were written separately for each Java service using JUnit 5 and Mockito.
+
+To run unit tests, navigate to each service directory and run:
 ```bash
 # Run unit tests
-make test
-
-# Run integration tests
-make test-integration
-
-# Load testing
-make load-test
-
-# Test coverage
-make coverage
+mvn test
 ```
+
+# or if using Maven
+mvn test
 
 ## ☁️ Cloud Deployment Architecture
 
