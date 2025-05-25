@@ -13,12 +13,9 @@ A high-performance, real-time NBA player statistics logging and aggregation syst
 - **Real-time Updates**: Statistics available immediately after ingestion
 
 ## 🏗️ Architecture
-![System Architecture](./docs/NBAStats-system design.drawio.png)
-<a href="./docs/NBA Stats- AWS Services.drawio.png" target="_blank">
-  <img src="./docs/NBA Stats- AWS Services.drawio.png" alt="AWS Architecture Diagram" width="100%">
-</a>
-
-*Figure 1: High-level system architecture showing the main components and their interactions*
+<a href="./docs/system-design.drawio.png" target="_blank"/>
+<br/>
+<a href="./docs/aws-design.drawio.png" target="_blank"/>
 
 
 ### Data Flow
