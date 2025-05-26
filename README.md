@@ -78,7 +78,7 @@ The system will be available at:
 
 ### Logger API
 ```http
-POST /api/v1/log-stats
+POST /api/log-stats
 Content-Type: application/json
 
 {
@@ -101,12 +101,12 @@ Content-Type: application/json
 
 #### Get Player Stats (Live + Historical)
 ```http
-GET /api/v1/stats/player/{playerId}
+GET /api/stats/player/{playerId}
 ```
 
-#### Get Team Season Average
+#### Get Team Stats (Live + Historical)
 ```http
-GET /api/v1/stats/team/{teamId
+GET /api/stats/team/{teamId
 ```
 
 ### Response Format
@@ -115,16 +115,13 @@ GET /api/v1/stats/team/{teamId
   "playerId": "lebron_james",
   "playerName": "LeBron James",
   "teamId": "lakers",
-  "averages": {
-    "points": 25.4,
-    "rebounds": 7.8,
-    "assists": 8.2,
-    "steals": 1.3,
-    "blocks": 0.8,
-    "fouls": 2.1,
-    "turnovers": 3.5,
-    "minutesPlayed": 36.2
-  },
+  "avgPoints": 25.4,
+  "avgRebounds": 7.8,
+  "avgAssists": 8.2,
+   "avgSteals": 1.3,
+   "avgBlocks": 0.8,
+   "avgFouls": 2.1,
+   "avgTurnovers": 3.5,
   "gamesPlayed": 45,
   "lastUpdated": "2024-01-15T20:45:00Z"
 }
@@ -133,19 +130,16 @@ GET /api/v1/stats/team/{teamId
 
 
 ### Testing
+Unit tests were written separately for each Java service using JUnit 5 and Mockito.
+
+To run unit tests, navigate to each service directory and run:
 ```bash
 # Run unit tests
-make test
-
-# Run integration tests
-make test-integration
-
-# Load testing
-make load-test
-
-# Test coverage
-make coverage
+mvn test
 ```
+
+# or if using Maven
+mvn test
 
 ## ☁️ Cloud Deployment Architecture
 
